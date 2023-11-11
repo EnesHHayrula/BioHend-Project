@@ -4,7 +4,9 @@ import ChooseUs from "./components/ChooseUs";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hottest from "./components/Hottest";
+import Loader from "./components/Loader";
 import Products from "./components/Products";
+import ThreePics from "./components/ThreePics";
 
 function App() {
   return (
@@ -12,11 +14,7 @@ function App() {
       <div>
         {/* body */}
         {/* loader  */}
-        <div className="loader_bg">
-          <div className="loader">
-            <img src="images/loading.gif" alt="#" />
-          </div>
-        </div>
+        <Loader />
 
         {/* header */}
         <Header />
@@ -25,33 +23,7 @@ function App() {
         <Banner />
         {/* end banner */}
         {/* three_box */}
-        <div className="three_box">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-4">
-                <div className="box_text">
-                  <figure>
-                    <img src="images/img1.jpg" alt="#" />
-                  </figure>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="box_text">
-                  <figure>
-                    <img src="images/img2.jpg" alt="#" />
-                  </figure>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="box_text">
-                  <figure>
-                    <img src="images/img3.jpg" alt="#" />
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ThreePics />
         {/* three_box */}
         {/* hottest */}
         <Hottest />
