@@ -2,6 +2,7 @@ import About from "./components/About";
 import ChooseUs from "./components/ChooseUs";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Hottest from "./components/Hottest";
 import Products from "./components/Products";
 
 function App() {
@@ -15,11 +16,10 @@ function App() {
             <img src="images/loading.gif" alt="#" />
           </div>
         </div>
-        {/* end loader */}
+
         {/* header */}
         <Header />
-        {/* end header inner */}
-        {/* end header */}
+
         {/* banner */}
         <section className="banner_main">
           <div className="container">
@@ -71,51 +71,17 @@ function App() {
         </div>
         {/* three_box */}
         {/* hottest */}
-        <div className="hottest">
-          <div className="container">
-            <div className="row d_flex">
-              <div className="col-md-5">
-                <div className="titlepage">
-                  <h2>
-                    World’s Hottest Destinations <br />
-                    for Vegans
-                  </h2>
-                </div>
-              </div>
-              <div className="col-md-7">
-                <div className="hottest_box">
-                  <p>
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some
-                    form, by injected humour, or randomised words which don't
-                    look even slightly believable. If you are going to use a
-                    passage of Lorem Ipsum, you need to be sure there isn't
-                    anything embarrassing hidden in the middle of text. All the
-                    Lorem Ipsum generators on the Internet tend to repeat
-                    predefined There are many variations of passages of Lorem
-                    Ipsum available, but the majority have suffered alteration
-                    in some form, by injected humour, or randomised words which
-                    don't look even slightly believable. If you are going to use
-                    a passage of Lorem Ipsum, you need to be sure there isn't
-                    anything embarrassing hidden in the middle of text. All the
-                    Lorem Ipsum generators on the Internet tend to repeat
-                    predefined{" "}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* end hottest */}
+        <Hottest />
+
         {/* choose  section */}
         <ChooseUs />
-        {/* end choose  section */}
+
         {/* product  section */}
         <Products />
-        {/* end product  section */}
+
         {/* about */}
         <About />
-        {/* end about */}
+
         {/*  footer */}
         <Footer />
       </div>
