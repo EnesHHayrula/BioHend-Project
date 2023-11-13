@@ -327,14 +327,14 @@ ul.btn li:last-child {
 
 .navigation.navbar-dark .navbar-nav .nav-link:focus,
 .navigation.navbar-dark .navbar-nav .nav-link:hover {
-     color: #f4cb1e;
+     color: #971ef4;
 }
 
 .navigation.navbar-dark .navbar-nav .active>.nav-link,
 .navigation.navbar-dark .navbar-nav .nav-link.active,
 .navigation.navbar-dark .navbar-nav .nav-link.show,
 .navigation.navbar-dark .navbar-nav .show>.nav-link {
-     color: #f4cb1e;
+     color: #971ef4;
 }
 
 .navbar-expand-md .navbar-nav {
@@ -354,7 +354,7 @@ ul.btn li:last-child {
      padding: 8px 39px;
      color: #fff;
      font-size: 16px;
-     background-color: #f4cb1e;
+     background-color: #c61ef4;
      text-transform: uppercase;
      margin-top: -10px;
      margin-left: 30px;
@@ -437,7 +437,7 @@ ul.btn li:last-child {
      text-align: center;
      display: inline-block;
      border-radius: 30px;
-     border: #f4cb1e solid 4px;
+     border: #941ef4 solid 4px;
      transition: ease-in all 0.5s;
 }
 
@@ -475,7 +475,7 @@ ul.btn li:last-child {
 
 .read_more {
      font-size: 17px;
-     background-color: #f4cb1e;
+     background-color: #c21ef4;
      color: #fff;
      padding: 13px 0px;
      width: 100%;
@@ -535,7 +535,7 @@ ul.btn li:last-child {
 
 .hottest .hottest_box {
      position: relative;
-     background-color: #f4cb1e;
+     background-color: #df1ef4;
      padding: 60px 40px;
 }
 
@@ -635,7 +635,7 @@ ul.btn li:last-child {
 
 .choose_box i img {
      float: left;
-     background-color: #f4cb1e;
+     background-color: #d71ef4;
      width: 140px;
      padding: 10px;
      border-radius: 60px;
@@ -785,7 +785,7 @@ ul.btn li:last-child {
      width: 56px;
      height: 15px;
      border-radius: 20px;
-     background: #f4cb1e;
+     background: #e21ef4;
 }
 
 .about_Carousel .carousel-indicators li.active {
@@ -852,7 +852,7 @@ ul.btn li:last-child {
 .main_form .send_btn {
      font-size: 20px;
      transition: ease-in all 0.5s;
-     background-color: #f4cb1e;
+     background-color: #a61ef4;
      color: #000;
      padding: 16px 0px;
      max-width: 333px;
@@ -894,7 +894,7 @@ ul.social_icon li a {
 }
 
 ul.social_icon li a:hover {
-     background-color: #f4cb1e;
+     background-color: #ad1ef4;
      color: #fff;
 }
 
@@ -952,7 +952,7 @@ ul.link li a {
 }
 
 ul.link li a:hover {
-     color: #f4cb1e;
+     color: #a61ef4;
 }
 
 ul.link li a::after {
@@ -985,7 +985,7 @@ ul.link li a::after {
 .sub_btn {
      font-size: 17px;
      transition: ease-in all 0.5s;
-     background-color: #f4cb1e;
+     background-color: #941ef4;
      color: #fff;
      padding: 11px 0px;
      max-width: 200px;
@@ -1005,7 +1005,7 @@ ul.link li a::after {
 .copyright {
      margin-top: 70px;
      padding: 20px 0px;
-     background-color: #f4cb1e;
+     background-color: #b71ef4;
 }
 
 .copyright p {
