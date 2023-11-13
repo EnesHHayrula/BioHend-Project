@@ -82,7 +82,7 @@ export default function ChooseUs() {
           <div className="col-xl-5 col-lg-5 col-md-12 col-sm-12">
             <div className="choose_img">
               <figure>
-                <img src="images/food.jpg" alt="#" />
+                <img src="images/distillery.jpg" alt="#" />
               </figure>
             </div>
           </div>
