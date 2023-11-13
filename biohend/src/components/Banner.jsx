@@ -5,7 +5,7 @@ export default function Banner() {
         <div className="row">
           <div className="col-md-12 ">
             <div className="text-bg">
-              <h1>FARMING COMPANY</h1>
+              <h1>BIOHEND</h1>
               <p>
                 It is a long established fact that a reader will be distracted
                 by the readable content of a page when looking at its layout.

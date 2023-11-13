@@ -17,7 +17,7 @@ export default function Products(){
                   <figure>
                     <img src="images/product1.jpg" alt="#" />
                   </figure>
-                  <h3 className="black">Lavender Oil</h3>
+                  <h3 className="black">Lavender Water</h3>
                 </div>
               </div>
               <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12">
@@ -25,7 +25,7 @@ export default function Products(){
                   <figure>
                     <img src="images/product2.jpg" alt="#" />
                   </figure>
-                  <h3>Lavender Water</h3>
+                  <h3>Lavender Oil</h3>
                 </div>
               </div>
               <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 padding_right0">
