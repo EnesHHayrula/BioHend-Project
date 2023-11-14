@@ -1,47 +1,21 @@
-import About from "./components/About";
-import Banner from "./components/Banner";
-import ChooseUs from "./components/ChooseUs";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Hottest from "./components/Hottest";
+import { Routes, Route } from "react-router-dom";
+
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
 import Loader from "./components/Loader";
-import Products from "./components/Products";
-import ThreePics from "./components/ThreePics";
+import Home from "./components/home/Home";
 
 function App() {
   return (
-    <>
+    <div id="root">
       <div>
-        {/* body */}
-        {/* loader  */}
-        <Loader />
-
-        {/* header */}
         <Header />
-
-        {/* banner */}
-        <Banner />
-        {/* end banner */}
-        {/* three_box */}
-        <ThreePics />
-        {/* three_box */}
-        {/* hottest */}
-        <Hottest />
-
-        {/* choose  section */}
-        <ChooseUs />
-
-        {/* product  section */}
-        <Products />
-
-        {/* about */}
-        <About />
-
-        {/*  footer */}
+        {/* <Loader /> */}
+        
+        <Home/>
         <Footer />
       </div>
-      ;
-    </>
+    </div>
   );
 }
 
