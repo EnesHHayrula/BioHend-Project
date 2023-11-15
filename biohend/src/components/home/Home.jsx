@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Home() {
   return (
     <div>
@@ -43,7 +45,7 @@ export default function Home() {
                   and embrace the soothing power of BioHend's lavender
                   offerings.
                 </p>
-                <a href="#">Discover</a>
+                <Link to="#">Discover</Link>
               </div>
             </div>
           </div>

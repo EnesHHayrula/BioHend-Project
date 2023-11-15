@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 export default function Header() {
   // Assume isLoggedIn is a state variable indicating the user's login status
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -14,9 +14,9 @@ export default function Header() {
               <div className="full">
                 <div className="center-desk">
                   <div className="logo">
-                    <a href="/">
+                    <Link to="/">
                       <img src="images/logo.png" alt="/" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -37,56 +37,56 @@ export default function Header() {
                 <div className="collapse navbar-collapse" id="navbarsExample04">
                   <ul className="navbar-nav mr-auto">
                     <li className="nav-item active">
-                      <a className="nav-link" href="/">
-                        {" "}
+                      <Link className="nav-link" to="/">
+                        {""}
                         Home
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="about.html">
+                      <Link className="nav-link" to="about">
                         About
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="products.html">
+                      <Link className="nav-link" to="products.html">
                         Products{" "}
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="blog.html">
+                      <Link className="nav-link" to="blog">
                         Blog
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="contact.html">
+                      <Link className="nav-link" to="contact.html">
                         Contact
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item d_none">
-                      <a className="nav-link" href="#">
+                      <Link className="nav-link" to="#">
                         <i className="fa fa-search" aria-hidden="true" />
-                      </a>
+                      </Link>
                     </li>
                     {/* Conditionally render "Logout", "Register", or "Login" based on isLoggedIn */}
                     {isLoggedIn ? (
                       <>
                         <li className="nav-item">
-                          <a className="nav-link" href="/logout">
+                          <Link className="nav-link" to="/logout">
                             Logout
-                          </a>
+                          </Link>
                         </li>
                       </>
                     ) : (
                       <>
                         <li className="nav-item">
-                          <a className="nav-link" href="/register">
+                          <Link className="nav-link" to="/register">
                             Register
-                          </a>
+                          </Link>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="/login">
+                          <Link className="nav-link" to="/login">
                             Login
-                          </a>
+                          </Link>
                         </li>
                       </>
                     )}

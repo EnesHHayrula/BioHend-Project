@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer id="contact">
@@ -136,7 +138,7 @@ export default function Footer() {
                   <a href="products.html">Products</a>
                 </li>
                 <li>
-                  <a href="blog.html">Blog</a>
+                  <Link to="blog">Blog</Link>
                 </li>
                 <li>
                   <a href="contact.html">Contact</a>
