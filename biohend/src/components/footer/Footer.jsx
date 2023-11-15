@@ -127,7 +127,7 @@ export default function Footer() {
               <h3>Menus</h3>
               <ul className="link">
                 <li>
-                  <a href="index.html">Home</a>
+                  <a href="/">Home</a>
                 </li>
                 <li>
                   <a href="about.html">About</a>
