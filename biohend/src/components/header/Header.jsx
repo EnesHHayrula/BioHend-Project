@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaRegHeart } from "react-icons/fa";
+import { VscAccount } from "react-icons/vsc";
+import { IoCartOutline } from "react-icons/io5";
+
 export default function Header() {
   // Assume isLoggedIn is a state variable indicating the user's login status
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -65,6 +69,21 @@ export default function Header() {
                     <li className="nav-item d_none">
                       <Link className="nav-link" to="#">
                         <i className="fa fa-search" aria-hidden="true" />
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="favorites">
+                        <FaRegHeart />
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="favorites">
+                        <VscAccount />
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="favorites">
+                        <IoCartOutline />
                       </Link>
                     </li>
                     {/* Conditionally render "Logout", "Register", or "Login" based on isLoggedIn */}
