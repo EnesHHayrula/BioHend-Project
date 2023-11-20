@@ -7,17 +7,20 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import About from "./components/about/About";
 import Blog from "./components/blog/Blog";
-
+import Cart from "./components/cart/cart";
+import Favorites from "./components/favorites/Favorites";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="login" element={<Login />} />
+          <Route path="my-account" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="about" element={<About />} />
           <Route path="blog" element={<Blog />} />
+          <Route path="shopping-cart" element={<Cart />} />
+          <Route path="favorites" element={<Favorites />} />
         </Route>
       </Routes>
     </BrowserRouter>
