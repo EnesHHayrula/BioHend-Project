@@ -26,11 +26,7 @@ export default function Home() {
         media="screen"
       />
       {/*[endif]--*/}
-      <div className="loader_bg">
-        <div className="loader">
-          <img src="images/loading.gif" alt="#" />
-        </div>
-      </div>
+
       <section className="banner_main">
         <div className="container">
           <div className="row">
