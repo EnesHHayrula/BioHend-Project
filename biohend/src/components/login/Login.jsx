@@ -1,21 +1,46 @@
+import "./Login.css";
+
 export default function Login() {
   return (
     <>
-      <div className="container">
-        <div className="login-container">
-          <h2>Login</h2>
-          <form id="loginForm" onsubmit="loginSuccess(event)">
-            <label htmlFor="username">Username:</label>
-            <input type="text" id="username" name="username" required="" />
-            <label htmlFor="password">Password:</label>
-            <input type="password" id="password" name="password" required="" />
-            <button type="submit">Login</button>
+      <title>Slide Navbar</title>
+      <link rel="stylesheet" type="text/css" href="./login.css" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
+        rel="stylesheet"
+      />
+      <div className="main">
+        <input type="checkbox" id="chk" aria-hidden="true" />
+        <div className="signup">
+          <form>
+            <label htmlFor="chk" aria-hidden="true">
+              Sign up
+            </label>
+            <input type="text" name="txt" placeholder="User name" required="" />
+            <input type="email" name="email" placeholder="Email" required="" />
+            <input
+              type="password"
+              name="pswd"
+              placeholder="Password"
+              required=""
+            />
+            <button>Sign up</button>
           </form>
         </div>
-      </div>
-      <div id="loginSuccessModal" className="modal">
-        <div className="modal-content">
-          <p>Login successful! Redirecting...</p>
+        <div className="login">
+          <form>
+            <label htmlFor="chk" aria-hidden="true">
+              Login
+            </label>
+            <input type="email" name="email" placeholder="Email" required="" />
+            <input
+              type="password"
+              name="pswd"
+              placeholder="Password"
+              required=""
+            />
+            <button>Login</button>
+          </form>
         </div>
       </div>
     </>
