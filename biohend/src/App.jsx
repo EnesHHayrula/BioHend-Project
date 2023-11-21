@@ -7,7 +7,7 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import About from "./components/about/About";
 import Blog from "./components/blog/Blog";
-import Cart from "./components/cart/cart";
+import Cart from "./components/cart/Cart";
 import Favorites from "./components/favorites/Favorites";
 import Contact from "./components/contact/Contact";
 
