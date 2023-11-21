@@ -48,7 +48,7 @@ const Cart = () => {
                       <td className="total-pr">
                         <p>$ 5.00</p>
                       </td>
-                      <td className="remove-pr">
+                      <td className="remove-pr" style={{fontSize:'40px', textAlign:'center'}}>
                         <a href="#">
                           <CiSquareRemove />
                         </a>
@@ -79,7 +79,7 @@ const Cart = () => {
                       <td className="total-pr">
                         <p>$ 12.00</p>
                       </td>
-                      <td className="remove-pr">
+                      <td className="remove-pr" style={{fontSize:'40px', textAlign:'center'}}>
                         <a href="#">
                           <CiSquareRemove />
                         </a>
@@ -110,7 +110,7 @@ const Cart = () => {
                       <td className="total-pr">
                         <p>$ 15.00</p>
                       </td>
-                      <td className="remove-pr">
+                      <td className="remove-pr" style={{fontSize:'40px', textAlign:'center'}}>
                         <a href="#">
                           <CiSquareRemove />
                         </a>
