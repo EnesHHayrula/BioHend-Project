@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./Footer.css";
 
 export default function Footer() {
   return (
@@ -45,11 +46,7 @@ export default function Footer() {
                           <i className="fa fa-facebook" aria-hidden="true" />
                         </a>
                       </li>
-                      <li>
-                        <a href="#">
-                          <i className="fa fa-twitter" aria-hidden="true" />
-                        </a>
-                      </li>
+
                       <li>
                         <a href="#">
                           <i
