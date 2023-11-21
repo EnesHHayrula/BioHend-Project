@@ -9,6 +9,8 @@ import About from "./components/about/About";
 import Blog from "./components/blog/Blog";
 import Cart from "./components/cart/cart";
 import Favorites from "./components/favorites/Favorites";
+import Contact from "./components/contact/Contact";
+
 function App() {
   return (
     <BrowserRouter>
@@ -19,6 +21,7 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="about" element={<About />} />
           <Route path="blog" element={<Blog />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="shopping-cart" element={<Cart />} />
           <Route path="favorites" element={<Favorites />} />
         </Route>
