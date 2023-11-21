@@ -89,7 +89,7 @@ export default function Header() {
                         {...(location.pathname === "/contact"
                           ? "active"
                           : "inactive")}
-                        to="contact.html"
+                        to="contact"
                       >
                         Contact
                       </Link>
@@ -133,40 +133,6 @@ export default function Header() {
                       </Link>
                     </li>
                     {/* Conditionally render "Logout", "Register", or "Login" based on isLoggedIn */}
-                    {isLoggedIn ? (
-                      <>
-                        <li className="nav-item">
-                          <Link className="nav-link" to="/logout">
-                            Logout
-                          </Link>
-                        </li>
-                      </>
-                    ) : (
-                      <>
-                        <li className="nav-item">
-                          <Link
-                            className="nav-link"
-                            {...(location.pathname === "/register"
-                              ? "active"
-                              : "inactive")}
-                            to="/register"
-                          >
-                            Register
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link
-                            className="nav-link"
-                            {...(location.pathname === "/login"
-                              ? "active"
-                              : "inactive")}
-                            to="/login"
-                          >
-                            Login
-                          </Link>
-                        </li>
-                      </>
-                    )}
                   </ul>
                 </div>
               </nav>
