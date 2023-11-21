@@ -55,6 +55,7 @@
 
 /* Quantity input styles */
 .quantity-box input {
+  margin: 0 auto;
   width: 50px;
   padding: 5px;
   border: 1px solid #ccc;
@@ -129,4 +130,12 @@
   .col-sm-12 {
     width: 100%;
   }
+}
+
+.cart-image{
+  background-size: cover;
+  background-position: top center;
+  width: 300px;
+  display: inline-block;
+  height: 160px;
 }
