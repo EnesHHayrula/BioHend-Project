@@ -27,7 +27,7 @@ const Cart = () => {
                         <a href="#">
                           <img
                             className="img-fluid"
-                            src="/public/images/product2"
+                            src="/public/images/product2.jpg"
                           />
                         </a>
                       </td>
@@ -61,7 +61,7 @@ const Cart = () => {
                         <a href="#">
                           <img
                             className="img-fluid"
-                            src="images/product1"
+                            src="images/product1.jpg"
                             alt=""
                           />
                         </a>
