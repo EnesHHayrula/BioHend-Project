@@ -1,0 +1,132 @@
+/* Cart section styles */
+.cart-box-main {
+  background-color: rgba(245, 245, 245, 0.8); /* Light gray with transparency */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Ensure it's positioned relative */
+  z-index: 1; /* Set a higher z-index to place it above the banner */
+}
+
+.cart-box-main .container {
+  width: 90%;
+  margin: auto;
+}
+
+/* Cart table styles */
+.cart-box-main .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Banner styles */
+.banner {
+  /* Your banner styles */
+  /* For example: */
+  background-image: url("/public/images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* Adjust as per your banner height */
+  position: relative;
+  z-index: 0; /* Ensure the banner stays behind the cart */
+}
+
+/* Cart table styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #6a0dad;
+  color: white;
+}
+
+.table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Quantity input styles */
+.quantity-box input {
+  width: 50px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Coupon and Update button styles */
+
+.update-box input[type="submit"] {
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.update-box input[type="submit"]:hover {
+  background-color: #4b0769;
+}
+
+/* Order summary styles */
+.order-box {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.order-box h3 {
+  color: #6a0dad;
+  margin-bottom: 15px;
+}
+
+.order-box hr {
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.order-box .d-flex {
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.order-box .font-weight-bold {
+  font-weight: bold;
+}
+
+.order-box .h5 {
+  font-size: 1.5em;
+}
+
+/* Checkout button */
+.shopping-box {
+  margin-top: 30px;
+}
+
+.shopping-box a.btn {
+  background-color: #6a0dad;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.shopping-box a.btn:hover {
+  background-color: #4b0769;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .col-sm-12 {
+    width: 100%;
+  }
+}
