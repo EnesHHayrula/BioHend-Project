@@ -132,7 +132,7 @@ export default function Footer() {
                   <a href="about.html">About</a>
                 </li>
                 <li>
-                  <a href="products.html">Products</a>
+                  <a href="shop">Products</a>
                 </li>
                 <li>
                   <Link to="blog">Blog</Link>

@@ -67,7 +67,7 @@ export default function Header() {
                         {...(location.pathname === "/products"
                           ? "active"
                           : "inactive")}
-                        to="products.html"
+                        to="shop"
                       >
                         Products{" "}
                       </Link>
