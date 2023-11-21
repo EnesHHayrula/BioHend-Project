@@ -1,0 +1,38 @@
+.product {
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+.shop-box-inner {
+  margin: 50px 0;
+}
+
+.product-icons {
+  font-size: 18px;
+  padding-left: 25px;
+}
+
+.product-icons.text-right {
+  padding-right: 25px;
+  font-size: 24px;
+}
+
+.product h3 {
+  padding-top: 10px;
+}
+
+.product .cart {
+  background-color: #7d26cd;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 4px;
+  line-height: 50px;
+}
+
+.product-image {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: inline-block;
+  height: 160px;
+}
