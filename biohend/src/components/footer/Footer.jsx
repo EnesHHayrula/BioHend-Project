@@ -7,77 +7,7 @@ export default function Footer() {
       <div className="footer">
         <div className="container">
           <div className="row">
-            <div className="col-md-4">
-              <div className="titlepage">
-                <h2>Contact Us</h2>
-              </div>
-            </div>
-            <div className="col-md-12">
-              <form id="request" className="main_form">
-                <div className="row">
-                  <div className="col-md-3 ">
-                    <input
-                      className="contactus"
-                      placeholder="Full Name"
-                      type="type"
-                      name="Full Name"
-                    />
-                  </div>
-                  <div className="col-md-3">
-                    <input
-                      className="contactus"
-                      placeholder="Email"
-                      type="type"
-                      name="Email"
-                    />
-                  </div>
-                  <div className="col-md-3">
-                    <input
-                      className="contactus"
-                      placeholder="Phone Number"
-                      type="type"
-                      name="Phone Number"
-                    />
-                  </div>
-                  <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                    <ul className="social_icon">
-                      <li>
-                        <a href="#">
-                          <i className="fa fa-facebook" aria-hidden="true" />
-                        </a>
-                      </li>
-
-                      <li>
-                        <a href="#">
-                          <i
-                            className="fa fa-linkedin-square"
-                            aria-hidden="true"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fa fa-instagram" aria-hidden="true" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="col-md-8">
-                    <textarea
-                      className="contactus1"
-                      placeholder="Message"
-                      type="type"
-                      message="Name"
-                      defaultValue={"Message "}
-                    />
-                  </div>
-                  <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <button className="send_btn">Send</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div className="col-md-3 border_right">
+            <div className="col-md-4 border_right">
               <ul className="location_icon">
                 <li>
                   <a href="#">
@@ -102,7 +32,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="col-md-3 border_right">
+            <div className="col-md-4 border_right">
               <h3>Useful Link</h3>
               <ul className="link">
                 <li>
@@ -122,7 +52,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="col-md-3 border_right">
+            <div className="col-md-4 border_left">
               <h3>Menus</h3>
               <ul className="link">
                 <li>
@@ -141,18 +71,6 @@ export default function Footer() {
                   <a href="contact.html">Contact</a>
                 </li>
               </ul>
-            </div>
-            <div className="col-md-3">
-              <form className="bottom_form">
-                <h3>Newsletter</h3>
-                <input
-                  className="enter"
-                  placeholder="Enter your email"
-                  type="text"
-                  name="Enter your email"
-                />
-                <button className="sub_btn">subscribe</button>
-              </form>
             </div>
           </div>
         </div>
