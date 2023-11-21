@@ -1,0 +1,88 @@
+.main_form {
+    padding: 50px 0px 50px 0px;
+  }
+  
+  .main_form .contactus {
+    border: inherit;
+    padding: 0px 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 45px;
+    background: #ffffff;
+    color: #777977;
+    font-size: 18px;
+    font-weight: normal;
+    border-bottom: #ddd solid 1px;
+  }
+  
+  .main_form .contactus1 {
+    border: inherit;
+    padding: 0px 15px;
+    margin-bottom: 20px;
+    padding-top: 21px;
+    width: 100%;
+    height: 80px;
+    background: #ffffff;
+    color: #777977;
+    font-size: 18px;
+    font-weight: normal;
+    border-bottom: #ddd solid 1px;
+  }
+  
+  .main_form .send_btn {
+    font-size: 14px;
+    transition: ease-in all 0.5s;
+    background-color: #8d1ef4;
+    color: #000;
+    max-width: 120px;
+    font-weight: 700;
+    width: 100%;
+    display: block;
+    margin-top: 11px;
+    margin-left: 15px;
+  }
+  
+  .main_form .send_btn:hover {
+    background-color: #fff;
+    transition: ease-in all 0.5s;
+    color: #000;
+  }
+  
+  #request *::placeholder {
+    color: #777977;
+    opacity: 1;
+  }
+  
+  ul.social_icon {
+    padding-top: 6px;
+  }
+  
+  ul.social_icon li {
+    display: inline-block;
+  }
+  
+  ul.social_icon li a {
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    border-radius: 30px;
+    margin: 0 3px;
+  }
+  
+  ul.social_icon li a:hover {
+    background-color: #8d1ef4;
+    color: #fff;
+  }
+  
+  .bottom_form h3 {
+    font-weight: 600;
+    font-size: 22px;
+    text-align: left;
+    color: #fff;
+    padding-bottom: 15px;
+  }
+  
