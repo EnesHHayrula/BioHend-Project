@@ -371,7 +371,6 @@ ul.btn li:last-child {
 .header {
   width: 100%;
   padding: 30px 30px;
-  border-bottom: #c6cad5 solid 12px;
   background-color: #13110e;
 }
 
@@ -459,6 +458,8 @@ ul.btn li:last-child {
 .titlepage h2 {
   font-size: 50px;
   color: #090807;
+  margin-top: 35px;
+  margin-left: 45px;
   line-height: 62px;
   font-weight: bold;
   padding: 0;
@@ -800,3 +801,6 @@ ul.btn li:last-child {
 .products_page .product .titlepage {
   margin-top: 70px;
 }
+
+
+
