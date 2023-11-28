@@ -1,22 +1,17 @@
 import "./Account.css";
 
-export default function Login() {
+const AccountModal = ({ onClose, onCreate,  }) => {
   return (
     <>
-      <title>Slide Navbar</title>
-      <link rel="stylesheet" type="text/css" href="./login.css" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
-        rel="stylesheet"
-      />
-      <div className="main">
+      <div className="backdrop" onClick={onClose}></div>
+      <div className="user-modal">
         <input type="checkbox" id="chk" aria-hidden="true" />
         <div className="signup">
-          <form>
+          <form onSubmit={onCreate}>
             <label htmlFor="chk" aria-hidden="true">
               Sign up
             </label>
-            <input type="text" name="txt" placeholder="User name" required="" />
+
             <input type="email" name="email" placeholder="Email" required="" />
             <input
               type="password"
@@ -45,4 +40,6 @@ export default function Login() {
       </div>
     </>
   );
-}
+};
+
+export default AccountModal;
