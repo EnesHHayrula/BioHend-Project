@@ -3,6 +3,7 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
+    <>
     <footer id="contact">
       <div className="footer">
         <div className="container">
@@ -88,5 +89,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    </>
   );
 }
