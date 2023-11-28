@@ -40,6 +40,7 @@ body {
   font-family: "Lato", sans-serif;
   line-height: 1.80857;
   font-weight: normal;
+  padding-top: 126px;
 }
 
 a {
@@ -372,6 +373,10 @@ ul.btn li:last-child {
   width: 100%;
   padding: 30px 30px;
   background-color: #13110e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .logo {
@@ -794,13 +799,8 @@ ul.btn li:last-child {
 
 /** footer **/
 
-
-
 /** end footer **/
 
 .products_page .product .titlepage {
   margin-top: 70px;
 }
-
-
-
