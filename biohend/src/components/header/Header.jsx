@@ -3,10 +3,20 @@ import { Link, useLocation } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { VscAccount } from "react-icons/vsc";
 import { IoCartOutline } from "react-icons/io5";
+import AccountModal from "../accountModal/Account";
 
 export default function Header() {
   // Assume isLoggedIn is a state variable indicating the user's login status
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  const userClickHandler = () => {
+    setShowModal(true);
+  };
+
+  const hideUserModal = () => {
+    setShowModal(false);
+  };
 
   const location = useLocation;
   return (
@@ -111,15 +121,9 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link
-                        className="nav-link"
-                        {...(location.pathname === "/my-account"
-                          ? "active"
-                          : "inactive")}
-                        to="my-account"
-                      >
+                      <span className="nav-link" onClick={userClickHandler}>
                         <VscAccount />
-                      </Link>
+                      </span>
                     </li>
                     <li className="nav-item">
                       <Link
@@ -140,6 +144,12 @@ export default function Header() {
           </div>
         </div>
       </div>
+      {showModal && (
+                        <AccountModal
+                          onClose={hideUserModal}
+                          // onCreate={userClickHandler}
+                        />
+                      )}
     </header>
   );
 }
