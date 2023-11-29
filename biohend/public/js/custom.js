@@ -20,6 +20,18 @@ $(function () {
 		$('[data-toggle="tooltip"]').tooltip();
 	});
 
+	/* SignUp
+	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+
+	$(document).ready(function () {
+		$('.user-modal .signup-submit-button').on('click', function (e) {
+			e.preventDefault();
+
+			let form = new FormData($('.user-modal form'));
+			console.log(form.values);
+		});
+	});
+
 
 
 	/* Mouseover
