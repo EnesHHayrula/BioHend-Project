@@ -12,10 +12,12 @@ export default function Header() {
 
   const userClickHandler = () => {
     setShowModal(true);
+    document.body.style.overflow = "hidden";
   };
 
   const hideUserModal = () => {
     setShowModal(false);
+    document.body.style.overflow = "auto";
   };
 
   const location = useLocation;
@@ -145,11 +147,11 @@ export default function Header() {
         </div>
       </div>
       {showModal && (
-                        <AccountModal
-                          onClose={hideUserModal}
-                          // onCreate={userClickHandler}
-                        />
-                      )}
+        <AccountModal
+          onClose={hideUserModal}
+          // onCreate={userClickHandler}
+        />
+      )}
     </header>
   );
 }
