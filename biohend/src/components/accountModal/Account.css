@@ -6,9 +6,9 @@
   background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
   border-radius: 10px;
   box-shadow: 5px 20px 50px #000;
-  margin: 50px auto;
+  margin: 150px auto;
   position: relative;
-  z-index: 1001;
+  z-index: 10010;
 }
 #chk {
   display: none;
@@ -80,8 +80,16 @@
   height: 100%;
   position: fixed;
   top: 0;
-  z-index: 1000;
-  background-color: rgb(31 27 70 / 30%);
+  z-index: 10000;
+  background-color: rgb(31 27 70 / 40%);
+}
+
+.user-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 #chk:checked ~ .login {

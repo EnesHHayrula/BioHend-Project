@@ -2,7 +2,7 @@ import "./Account.css";
 
 const AccountModal = ({ onClose, onCreate,  }) => {
   return (
-    <>
+    <div className="user-pop-up">
       <div className="backdrop" onClick={onClose}></div>
       <div className="user-modal">
         <input type="checkbox" id="chk" aria-hidden="true" />
@@ -38,7 +38,7 @@ const AccountModal = ({ onClose, onCreate,  }) => {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
