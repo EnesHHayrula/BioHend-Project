@@ -147,10 +147,7 @@ export default function Header() {
         </div>
       </div>
       {showModal && (
-        <AccountModal
-          onClose={hideUserModal}
-          // onCreate={userClickHandler}
-        />
+        <AccountModal onClose={hideUserModal} onShow={userClickHandler} />
       )}
     </header>
   );
