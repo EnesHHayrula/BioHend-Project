@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Loader from "./components/Loader";
 import Home from "./components/home/Home";
@@ -9,10 +9,11 @@ import Cart from "./components/cart/Cart";
 import Favorites from "./components/favorites/Favorites";
 import Contact from "./components/contact/Contact";
 import Shop from "./components/shop/Shop";
+import { AuthProvider } from "./contexts/authContext";
 
 function App() {
   return (
-    <BrowserRouter>
+    <AuthProvider>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -24,7 +25,7 @@ function App() {
           <Route path="favorites" element={<Favorites />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </AuthProvider>
   );
 }
 
