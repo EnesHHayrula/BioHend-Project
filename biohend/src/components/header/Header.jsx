@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { VscAccount } from "react-icons/vsc";
 import { IoCartOutline } from "react-icons/io5";
-import AccountModal from "../accountModal/Account";
+import AccountModal from "../Account/Register";
 
 export default function Header() {
   // Assume isLoggedIn is a state variable indicating the user's login status
@@ -123,9 +123,15 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <span className="nav-link" onClick={userClickHandler}>
+                      <Link
+                        className="nav-link"
+                        {...(location.pathname === "/login"
+                          ? "active"
+                          : "inactive")}
+                        to="login"
+                      >
                         <VscAccount />
-                      </span>
+                      </Link>
                     </li>
                     <li className="nav-item">
                       <Link

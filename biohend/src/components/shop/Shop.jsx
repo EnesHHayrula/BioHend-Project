@@ -7,7 +7,6 @@ const Shop = () => {
   localStorage.setItem("Name", JSON.stringify({id: 1, price: 10, title: "kor"}));
   let kor = JSON.parse(localStorage.getItem('Name'));
 
-  console.log(kor.price);
   return (
     <div>
       <>

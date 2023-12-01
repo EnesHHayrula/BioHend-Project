@@ -13,7 +13,7 @@ export default function Footer() {
                   <li>
                     <a href="#">
                       <i className="fa fa-map-marker" aria-hidden="true" />
-                    </a>{" "}
+                    </a>
                     Aytos, Burgas, Bulgaria
                   </li>
                   <li>
@@ -22,7 +22,7 @@ export default function Footer() {
                         className="fa fa-volume-control-phone"
                         aria-hidden="true"
                       />
-                    </a>{" "}
+                    </a>
                     +359 877248264
                   </li>
                   <li>
@@ -40,13 +40,13 @@ export default function Footer() {
                     <a href="#">humour, or </a>
                   </li>
                   <li>
-                    <a href="#">randomised words </a>{" "}
+                    <a href="#">randomised words </a>
                   </li>
                   <li>
                     <a href="#">which don't look </a>
                   </li>
                   <li>
-                    <a href="#">even slightly</a>{" "}
+                    <a href="#">even slightly</a>
                   </li>
                   <li>
                     <a href="#">believable. If </a>
@@ -80,7 +80,7 @@ export default function Footer() {
               <div className="row">
                 <div className="col-md-12">
                   <p>
-                    Copyright 2019 All Right Reserved By{" "}
+                    Copyright 2019 All Right Reserved By
                     <a href="https://html.design/"> Free html Templates</a>
                   </p>
                 </div>

@@ -10,22 +10,37 @@ import Favorites from "./components/favorites/Favorites";
 import Contact from "./components/contact/Contact";
 import Shop from "./components/shop/Shop";
 import { AuthProvider } from "./contexts/authContext";
+import ErrorBoundary from "./components/ErrorBoundary";
+import Path from "./paths";
+import Logout from "./components/logout/Logout";
+import AuthGuard from "./components/guards/AuthGuard";
+import Login from "./components/Account/Login";
+import Register from "./components/Account/Register";
 
 function App() {
   return (
-    <AuthProvider>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="blog" element={<Blog />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="shopping-cart" element={<Cart />} />
-          <Route path="shop" element={<Shop />} />
-          <Route path="favorites" element={<Favorites />} />
-        </Route>
-      </Routes>
-    </AuthProvider>
+    <ErrorBoundary>
+      <AuthProvider>
+        <div id="box">
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="about" element={<About />} />
+              <Route path="blog" element={<Blog />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="shopping-cart" element={<Cart />} />
+              <Route path="shop" element={<Shop />} />
+              <Route path="register" element={<Register />} />
+              <Route path="login" element={<Login />} />
+              <Route element={<AuthGuard />}>
+                <Route path="favorites" element={<Favorites />} />
+                <Route path={Path.Logout} element={<Logout />} />
+              </Route>
+            </Route>
+          </Routes>
+        </div>
+      </AuthProvider>
+    </ErrorBoundary>
   );
 }
 
