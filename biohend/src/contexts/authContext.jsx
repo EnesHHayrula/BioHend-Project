@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import { useNavigate } from 'react-router-dom';
 
-import * as Auth from '../services/userService';
+import * as authService from '../services/authService';
 import usePersistedState from "../hooks/usePersistedState";
 import Path from '../paths';
 
@@ -14,7 +14,7 @@ export const AuthProvider = ({
     const [auth, setAuth] = usePersistedState('auth', {});
 
     const loginSubmitHandler = async (values) => {
-        const result = await Auth.login(values.email, values.password);
+        const result = await authService.login(values.email, values.password);
 
         setAuth(result);
 
@@ -24,7 +24,7 @@ export const AuthProvider = ({
     };
 
     const registerSubmitHandler = async (values) => {
-        const result = await Auth.register(values.email, values.password);
+        const result = await authService.register(values.email, values.password);
 
         setAuth(result);
 
