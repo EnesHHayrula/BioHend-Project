@@ -25,7 +25,7 @@ const Cart = () => {
                     <tr>
                       <td className="thumbnail-img">
                         <a href="#">
-                        <span className="cart-image" style={{backgroundImage: 'url(/public/images/product1.jpg)'}}> </span>
+                        <span className="cart-image" style={{backgroundImage: 'url(/images/product1.jpg)'}}> </span>
                           
                         </a>
                       </td>
@@ -57,7 +57,7 @@ const Cart = () => {
                     <tr>
                       <td className="thumbnail-img">
                         <a href="#">
-                        <span className="cart-image" style={{backgroundImage: 'url(/public/images/product2.jpg)'}}> </span>
+                        <span className="cart-image" style={{backgroundImage: 'url(/images/product2.jpg)'}}> </span>
                         </a>
                       </td>
                       <td className="name-pr">
@@ -88,7 +88,7 @@ const Cart = () => {
                     <tr>
                       <td className="thumbnail-img">
                         <a href="#">
-                        <span className="cart-image" style={{backgroundImage: 'url(/public/images/product3.jpg)'}}> </span>
+                        <span className="cart-image" style={{backgroundImage: 'url(/images/product3.jpg)'}}> </span>
                         </a>
                       </td>
                       <td className="name-pr">

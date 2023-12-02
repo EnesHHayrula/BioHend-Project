@@ -16,7 +16,7 @@ const Shop = () => {
             <div className="row">
               <div className="col-sm-6 col-md-4 col-lg-4 col-xs-12">
                 <div className="product">
-                  <span className="product-image" style={{backgroundImage: 'url(/public/images/product3.jpg)'}}> </span>
+                  <span className="product-image" style={{backgroundImage: 'url(/images/product3.jpg)'}}> </span>
                   <div className="col-xs-12 text-center">
                     <h3>Worm Tea</h3>
                   </div>
@@ -42,7 +42,7 @@ const Shop = () => {
               </div>
               <div className="col-sm-6 col-md-4 col-lg-4 col-xs-12">
                 <div className="product">
-                  <span className="product-image" style={{backgroundImage: 'url(/public/images/product2.jpg)'}}> </span>
+                  <span className="product-image" style={{backgroundImage: 'url(/images/product2.jpg)'}}> </span>
                   <div className="col-xs-12 text-center">
                     <h3>Lavender Oil</h3>
                   </div>
@@ -68,7 +68,7 @@ const Shop = () => {
               </div>
               <div className="col-sm-6 col-md-4 col-lg-4 col-xs-12">
                 <div className="product">
-                  <span className="product-image" style={{backgroundImage: 'url(/public/images/product1.jpg)'}}> </span>
+                  <span className="product-image" style={{backgroundImage: 'url(/images/product1.jpg)'}}> </span>
                   <div className="col-xs-12 text-center">
                     <h3>Lavender Water</h3>
                   </div>
