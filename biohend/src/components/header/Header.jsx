@@ -23,7 +23,6 @@ export default function Header() {
   const location = useLocation;
   return (
     <header>
-      {/* header inner */}
       <div className="header">
         <div className="container-fluid">
           <div className="row">
@@ -55,8 +54,11 @@ export default function Header() {
                   <ul className="navbar-nav mr-auto">
                     <li className="nav-item active">
                       <Link
-                        className="nav-link"
-                        {...(location.pathname === "/" ? "active" : "inactive")}
+                        className={
+                          location.pathname === "/"
+                            ? "nav-link active"
+                            : "nav-link inactive"
+                        }
                         to="/"
                       >
                         Home
@@ -64,10 +66,11 @@ export default function Header() {
                     </li>
                     <li className="nav-item">
                       <Link
-                        className="nav-link"
-                        {...(location.pathname === "/about"
-                          ? "active"
-                          : "inactive")}
+                        className={
+                          location.pathname === "/about"
+                            ? "nav-link active"
+                            : "nav-link inactive"
+                        }
                         to="about"
                       >
                         About
@@ -75,10 +78,11 @@ export default function Header() {
                     </li>
                     <li className="nav-item">
                       <Link
-                        className="nav-link"
-                        {...(location.pathname === "/products"
-                          ? "active"
-                          : "inactive")}
+                        className={
+                          location.pathname === "/products"
+                            ? "nav-link active"
+                            : "nav-link inactive"
+                        }
                         to="shop"
                       >
                         Products{" "}
@@ -86,10 +90,11 @@ export default function Header() {
                     </li>
                     <li className="nav-item">
                       <Link
-                        className="nav-link"
-                        {...(location.pathname === "/blog"
-                          ? "active"
-                          : "inactive")}
+                        className={
+                          location.pathname === "/blog"
+                            ? "nav-link active"
+                            : "nav-link inactive"
+                        }
                         to="blog"
                       >
                         Blog
@@ -97,10 +102,11 @@ export default function Header() {
                     </li>
                     <li className="nav-item">
                       <Link
-                        className="nav-link"
-                        {...(location.pathname === "/contact"
-                          ? "active"
-                          : "inactive")}
+                        className={
+                          location.pathname === "/contact"
+                            ? "nav-link active"
+                            : "nav-link inactive"
+                        }
                         to="contact"
                       >
                         Contact
@@ -113,10 +119,11 @@ export default function Header() {
                     </li>
                     <li className="nav-item">
                       <Link
-                        className="nav-link"
-                        {...(location.pathname === "/favorites"
-                          ? "active"
-                          : "inactive")}
+                        className={
+                          location.pathname === "/favorites"
+                            ? "nav-link active"
+                            : "nav-link inactive"
+                        }
                         to="favorites"
                       >
                         <FaRegHeart />
@@ -124,10 +131,11 @@ export default function Header() {
                     </li>
                     <li className="nav-item">
                       <Link
-                        className="nav-link"
-                        {...(location.pathname === "/login"
-                          ? "active"
-                          : "inactive")}
+                        className={
+                          location.pathname === "/login"
+                            ? "nav-link active"
+                            : "nav-link inactive"
+                        }
                         to="login"
                       >
                         <VscAccount />
@@ -135,10 +143,11 @@ export default function Header() {
                     </li>
                     <li className="nav-item">
                       <Link
-                        className="nav-link"
-                        {...(location.pathname === "/shopping-cart"
-                          ? "active"
-                          : "inactive")}
+                        className={
+                          location.pathname === "/shopping-cart"
+                            ? "nav-link active"
+                            : "nav-link inactive"
+                        }
                         to="shopping-cart"
                       >
                         <IoCartOutline />
