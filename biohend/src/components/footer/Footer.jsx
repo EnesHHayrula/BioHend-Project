@@ -60,7 +60,7 @@ export default function Footer() {
                     <a href="/">Home</a>
                   </li>
                   <li>
-                    <a href="about.html">About</a>
+                    <a href="about">About</a>
                   </li>
                   <li>
                     <a href="shop">Products</a>
@@ -69,7 +69,7 @@ export default function Footer() {
                     <Link to="blog">Blog</Link>
                   </li>
                   <li>
-                    <a href="contact.html">Contact</a>
+                    <a href="contact">Contact</a>
                   </li>
                 </ul>
               </div>
