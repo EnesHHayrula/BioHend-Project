@@ -11,24 +11,24 @@ export default function Footer() {
               <div className="col-md-4 border_right">
                 <ul className="location_icon">
                   <li>
-                    <a href="#">
+                    <Link href="#">
                       <i className="fa fa-map-marker" aria-hidden="true" />
-                    </a>
+                    </Link>
                     Aytos, Burgas, Bulgaria
                   </li>
                   <li>
-                    <a href="#">
+                    <Link href="#">
                       <i
                         className="fa fa-volume-control-phone"
                         aria-hidden="true"
                       />
-                    </a>
+                    </Link>
                     +359 877248264
                   </li>
                   <li>
-                    <a href="#">
+                    <Link href="#">
                       <i className="fa fa-envelope" aria-hidden="true" />
-                    </a>
+                    </Link>
                     eneshayrula@gmail.com
                   </li>
                 </ul>
@@ -37,19 +37,19 @@ export default function Footer() {
                 <h3>Useful Link</h3>
                 <ul className="link">
                   <li>
-                    <a href="#">humour, or </a>
+                    <Link href="#">humour, or </Link>
                   </li>
                   <li>
-                    <a href="#">randomised words </a>
+                    <Link href="#">randomised words </Link>
                   </li>
                   <li>
-                    <a href="#">which don't look </a>
+                    <Link href="#">which don't look </Link>
                   </li>
                   <li>
-                    <a href="#">even slightly</a>
+                    <Link href="#">even slightly</Link>
                   </li>
                   <li>
-                    <a href="#">believable. If </a>
+                    <Link href="#">believable. If </Link>
                   </li>
                 </ul>
               </div>
@@ -57,19 +57,19 @@ export default function Footer() {
                 <h3>Menus</h3>
                 <ul className="link">
                   <li>
-                    <a href="/">Home</a>
+                    <Link href="/">Home</Link>
                   </li>
                   <li>
-                    <a href="about">About</a>
+                    <Link href="about">About</Link>
                   </li>
                   <li>
-                    <a href="shop">Products</a>
+                    <Link href="shop">Products</Link>
                   </li>
                   <li>
                     <Link to="blog">Blog</Link>
                   </li>
                   <li>
-                    <a href="contact">Contact</a>
+                    <Link href="contact">Contact</Link>
                   </li>
                 </ul>
               </div>
@@ -81,7 +81,10 @@ export default function Footer() {
                 <div className="col-md-12">
                   <p>
                     Copyright 2019 All Right Reserved By
-                    <a href="https://html.design/"> Free html Templates</a>
+                    <Link href="https://html.design/">
+                      {" "}
+                      Free html Templates
+                    </Link>
                   </p>
                 </div>
               </div>

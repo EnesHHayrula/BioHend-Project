@@ -97,7 +97,7 @@ const Blog = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-5">
-              <a className="read_more" href="#">
+              <a className="read_more" to="#">
                 Read More
               </a>
             </div>
