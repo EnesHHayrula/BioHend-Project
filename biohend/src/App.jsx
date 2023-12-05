@@ -19,28 +19,30 @@ import Register from "./components/Account/Register";
 
 function App() {
   return (
-    <ErrorBoundary>
-      <AuthProvider>
-        <div id="box">
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
-              <Route path="about" element={<About />} />
-              <Route path="blog" element={<Blog />} />
-              <Route path="contact" element={<Contact />} />
-              <Route path="shopping-cart" element={<Cart />} />
-              <Route path="shop" element={<Shop />} />
-              <Route path="register" element={<Register />} />
-              <Route path="login" element={<Login />} />
-              <Route element={<AuthGuard />}>
-                <Route path="favorites" element={<Favorites />} />
-                <Route path={Path.Logout} element={<Logout />} />
+    <>
+      <div id="box">
+        <ErrorBoundary>
+          <AuthProvider>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="about" element={<About />} />
+                <Route path="blog" element={<Blog />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="shopping-cart" element={<Cart />} />
+                <Route path="shop" element={<Shop />} />
+                <Route path="register" element={<Register />} />
+                <Route path="login" element={<Login />} />
+                <Route element={<AuthGuard />}>
+                  <Route path="favorites" element={<Favorites />} />
+                  <Route path={Path.Logout} element={<Logout />} />
+                </Route>
               </Route>
-            </Route>
-          </Routes>
-        </div>
-      </AuthProvider>
-    </ErrorBoundary>
+            </Routes>
+          </AuthProvider>
+        </ErrorBoundary>
+      </div>
+    </>
   );
 }
 
