@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { VscAccount } from "react-icons/vsc";
 import { IoCartOutline } from "react-icons/io5";
-import AccountModal from "../Account/Register";
+import AuthContext from "../../contexts/authContext";
 
 export default function Header() {
   // Assume isLoggedIn is a state variable indicating the user's login status
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const { isAuthenticated } = useContext(AuthContext);
 
   const userClickHandler = () => {
     setShowModal(true);
@@ -20,7 +20,11 @@ export default function Header() {
     document.body.style.overflow = "auto";
   };
 
-  const location = useLocation;
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+  const location = useLocation();
   return (
     <header>
       <div className="header">
@@ -30,7 +34,7 @@ export default function Header() {
               <div className="full">
                 <div className="center-desk">
                   <div className="logo">
-                    <Link to="/">
+                    <Link to="/" onClick={scrollToTop}>
                       <img src="images/logo.png" alt="/" />
                     </Link>
                   </div>
@@ -60,6 +64,7 @@ export default function Header() {
                             : "nav-link inactive"
                         }
                         to="/"
+                        onClick={scrollToTop}
                       >
                         Home
                       </Link>
@@ -71,7 +76,8 @@ export default function Header() {
                             ? "nav-link active"
                             : "nav-link inactive"
                         }
-                        to="about"
+                        to="/about"
+                        onClick={scrollToTop}
                       >
                         About
                       </Link>
@@ -83,7 +89,8 @@ export default function Header() {
                             ? "nav-link active"
                             : "nav-link inactive"
                         }
-                        to="shop"
+                        to="/shop"
+                        onClick={scrollToTop}
                       >
                         Products{" "}
                       </Link>
@@ -95,7 +102,8 @@ export default function Header() {
                             ? "nav-link active"
                             : "nav-link inactive"
                         }
-                        to="blog"
+                        to="/blog"
+                        onClick={scrollToTop}
                       >
                         Blog
                       </Link>
@@ -107,7 +115,8 @@ export default function Header() {
                             ? "nav-link active"
                             : "nav-link inactive"
                         }
-                        to="contact"
+                        to="/contact"
+                        onClick={scrollToTop}
                       >
                         Contact
                       </Link>
@@ -124,22 +133,28 @@ export default function Header() {
                             ? "nav-link active"
                             : "nav-link inactive"
                         }
-                        to="favorites"
+                        to="/favorites"
+                        onClick={scrollToTop}
                       >
                         <FaRegHeart />
                       </Link>
                     </li>
-                    <li className="nav-item">
+                    <li className={`nav-item ${isAuthenticated ? "logout-active" : ""}`}>
                       <Link
                         className={
                           location.pathname === "/login"
                             ? "nav-link active"
                             : "nav-link inactive"
                         }
-                        to="login"
+                        to={`${isAuthenticated ? "" : "/login"}`}
+                        onClick={scrollToTop}
                       >
                         <VscAccount />
                       </Link>
+                      <div className="logout">
+                        <p>Hi, Pesho</p>
+                        <Link to="/logout">Logout</Link>
+                      </div>
                     </li>
                     <li className="nav-item">
                       <Link
@@ -149,6 +164,7 @@ export default function Header() {
                             : "nav-link inactive"
                         }
                         to="shopping-cart"
+                        onClick={scrollToTop}
                       >
                         <IoCartOutline />
                       </Link>
@@ -161,9 +177,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-      {showModal && (
-        <AccountModal onClose={hideUserModal} onShow={userClickHandler} />
-      )}
     </header>
   );
 }
