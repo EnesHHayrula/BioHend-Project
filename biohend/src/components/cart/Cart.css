@@ -1,145 +1,72 @@
-/* Cart section styles */
-.cart-box-main {
-  background-color: rgba(245, 245, 245, 0.8); /* Light gray with transparency */
+.shopping-cart {
+  position: absolute;
+  right: 20px;
+  top: 80px;
+  z-index: 1001;
+  background-color: white;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  position: relative; /* Ensure it's positioned relative */
-  z-index: 1; /* Set a higher z-index to place it above the banner */
+  -webkit-box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
 }
-
-.cart-box-main .container {
-  width: 90%;
-  margin: auto;
+.shopping-cart h1 {
+  margin-bottom: 30px;
+  color: gray;
+  font-weight: 400;
+  font-size: 24px;
 }
-
-/* Cart table styles */
-.cart-box-main .table {
-  width: 100%;
-  border-collapse: collapse;
+.shopping-cart .item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
 }
-
-/* Banner styles */
-.banner {
-  /* Your banner styles */
-  /* For example: */
-  background-image: url("/public/images/banner.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 300px; /* Adjust as per your banner height */
-  position: relative;
-  z-index: 0; /* Ensure the banner stays behind the cart */
+.item img {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
 }
-
-/* Cart table styles */
-.table {
-  width: 100%;
-  border-collapse: collapse;
+.item h1 {
+  font-size: 30px;
+  font-weight: 500;
 }
-
-.table th,
-.table td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+.item p {
+  color: gray;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
-
-.table th {
-  background-color: #6a0dad;
-  color: white;
+.item .price {
+  color: #7d26cd;
 }
-
-.table tbody tr:hover {
-  background-color: #f5f5f5;
-}
-
-.table remove-pr{
-  text-align: center;
-  font-size: 40px;
-}
-/* Quantity input styles */
-.quantity-box input {
-  margin: 0 auto;
-  width: 50px;
-  padding: 5px;
-  border: 1px solid #ccc;
-}
-
-/* Coupon and Update button styles */
-
-.update-box input[type="submit"] {
-  background-color: #6a0dad;
-  color: white;
-  border: none;
-  padding: 8px 15px;
+.item .delete {
+  color: #e21212e8;
+  font-size: 20px;
   cursor: pointer;
 }
 
-.update-box input[type="submit"]:hover {
-  background-color: #4b0769;
-}
-
-/* Order summary styles */
-.order-box {
-  background-color: #f5f5f5;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-}
-
-.order-box h3 {
-  color: #6a0dad;
-  margin-bottom: 15px;
-}
-
-.order-box hr {
-  border-top: 1px solid #ddd;
-  margin: 10px 0;
-}
-
-.order-box .d-flex {
+.shopping-cart .total {
+  display: flex;
   justify-content: space-between;
-  margin-bottom: 5px;
+  font-weight: 18px;
+  margin-bottom: 20px;
 }
 
-.order-box .font-weight-bold {
-  font-weight: bold;
-}
-
-.order-box .h5 {
-  font-size: 1.5em;
-}
-
-/* Checkout button */
-.shopping-box {
-  margin-top: 30px;
-}
-
-.shopping-box a.btn {
-  background-color: #6a0dad;
+.shopping-cart button {
+  width: 250px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #7d26cd;
   color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
-.shopping-box a.btn:hover {
-  background-color: #4b0769;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .col-sm-12 {
-    width: 100%;
-  }
-}
-
-.cart-image{
-  background-size: cover;
-  background-position: top center;
-  width: 300px;
-  display: inline-block;
-  height: 160px;
+.shopping-cart .reset {
+  color: #e21212e8;
+  font-size: 15px;
+  cursor: pointer;
 }
