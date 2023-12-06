@@ -1,9 +1,8 @@
 import "./Shop.css";
 import { FaRegHeart } from "react-icons/fa";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import React from "react";
 import { PRODUCTS } from "../products/Products";
-import * as productService from "../../services/productService";
 
 const Shop = () => {
   // Vzimane na dannite ot favorites za stranicata, za kolichkata e syshtata operaciq
@@ -110,7 +109,7 @@ const Shop = () => {
                     {" "}
                   </span>
                   <div className="col-xs-12 text-center">
-                    <h3>Lavender Oil</h3>
+                    <h3>Worm Tea</h3>
                   </div>
                   <div className="row">
                     <div className="col-xs-12 col-md-6 product-icons">
