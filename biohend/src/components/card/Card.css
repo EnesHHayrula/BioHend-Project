@@ -1,28 +1,29 @@
-.product {
+.products {
   border: 1px solid #000;
   border-radius: 4px;
+  margin-top: 15px;
 }
 
 .shop-box-inner {
   margin: 50px 0;
 }
 
-.product-icons {
+.products-icons {
   font-size: 18px;
   padding-left: 25px;
 }
 
-.product-icons.text-right {
+.products-icons.text-right {
   padding-right: 25px;
   font-size: 24px;
 }
 
-.product h3 {
+.products h3 {
   font-size: 20px;
   padding-top: 10px;
 }
 
-.product .cart {
+.products .cart {
   background-color: #7d26cd;
   color: #fff;
   padding: 10px 15px;
@@ -30,7 +31,7 @@
   line-height: 50px;
 }
 
-.product-image {
+.products-image {
   background-size: cover;
   background-position: center;
   width: 100%;

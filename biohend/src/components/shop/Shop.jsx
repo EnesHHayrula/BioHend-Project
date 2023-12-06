@@ -1,7 +1,7 @@
 import "./Shop.css";
 import { Link, useParams } from "react-router-dom";
 import React from "react";
-import { Products } from "../products/Products";
+import Products from "../products/Products";
 
 const Shop = () => {
   // Vzimane na dannite ot favorites za stranicata, za kolichkata e syshtata operaciq
@@ -23,8 +23,6 @@ const Shop = () => {
   //     </div>
   //   );
   // })}
-
-  
 
   // const removeFromCartHandler = (e) => {
   //   let items = JSON.parse(localStorage.getItem("shoppingCart")) ?? [];
@@ -82,8 +80,8 @@ const Shop = () => {
   //     localStorage.setItem("favorites", JSON.stringify(items));
   //   }
   // };
-const param = useParams()
-console.log(param);
+  const id = parseInt(useParams().id);
+  console.log(id);
   return (
     <div>
       <>
