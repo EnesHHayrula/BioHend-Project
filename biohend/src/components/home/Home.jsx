@@ -175,9 +175,9 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-5">
-              <a className="read_more" href="#">
+              <Link className="read_more" href="#">
                 Read More
-              </a>
+              </Link>
             </div>
           </div>
         </div>
