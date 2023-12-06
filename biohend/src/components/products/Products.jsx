@@ -1,7 +1,5 @@
 import React from "react";
 
-import { FaRegHeart } from "react-icons/fa";
-
 import pr1 from "/images/product1.jpg";
 import pr2 from "/images/product2.jpg";
 import pr3 from "/images/product3.jpg";
@@ -27,6 +25,12 @@ export const Products = () => {
       price: 10,
       title: "Worm Tea",
     },
+    {
+      id: 4,
+      img: pr3,
+      price: 8,
+      title: "Thyme Oil",
+    },
   ];
 
   return (
@@ -43,3 +47,5 @@ export const Products = () => {
     </>
   );
 };
+
+export default Products;

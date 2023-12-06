@@ -15,6 +15,7 @@ import Logout from "./components/logout/Logout";
 import AuthGuard from "./components/guards/AuthGuard";
 import Login from "./components/Account/Login";
 import Register from "./components/Account/Register";
+import ProductDetails from "./components/product-details/ProductDetails";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
                 <Route path="contact" element={<Contact />} />
                 <Route path="shopping-cart" element={<Cart />} />
                 <Route path="shop" element={<Shop />} />
+                <Route path="shop/:id" element={<ProductDetails />} />
                 <Route path="register" element={<Register />} />
                 <Route path="login" element={<Login />} />
                 <Route element={<AuthGuard />}>
