@@ -4,21 +4,12 @@ import { FaRegHeart } from "react-icons/fa";
 import { VscAccount } from "react-icons/vsc";
 import { IoCartOutline } from "react-icons/io5";
 import AuthContext from "../../contexts/authContext";
+import Cart from "../cart/Cart";
 
 export default function Header() {
-  // Assume isLoggedIn is a state variable indicating the user's login status
-  const [showModal, setShowModal] = useState(false);
+  const [open, setOpen] = useState(false);
+
   const { isAuthenticated } = useContext(AuthContext);
-
-  const userClickHandler = () => {
-    setShowModal(true);
-    document.body.style.overflow = "hidden";
-  };
-
-  const hideUserModal = () => {
-    setShowModal(false);
-    document.body.style.overflow = "auto";
-  };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -35,7 +26,7 @@ export default function Header() {
                 <div className="center-desk">
                   <div className="logo">
                     <Link to="/" onClick={scrollToTop}>
-                      <img src="images/logo.png" alt="/" />
+                      <img src="/images/logo.png" alt="/" />
                     </Link>
                   </div>
                 </div>
@@ -98,19 +89,6 @@ export default function Header() {
                     <li className="nav-item">
                       <Link
                         className={
-                          location.pathname === "/blog"
-                            ? "nav-link active"
-                            : "nav-link inactive"
-                        }
-                        to="/blog"
-                        onClick={scrollToTop}
-                      >
-                        Blog
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link
-                        className={
                           location.pathname === "/contact"
                             ? "nav-link active"
                             : "nav-link inactive"
@@ -139,7 +117,11 @@ export default function Header() {
                         <FaRegHeart />
                       </Link>
                     </li>
-                    <li className={`nav-item ${isAuthenticated ? "logout-active" : ""}`}>
+                    <li
+                      className={`nav-item ${
+                        isAuthenticated ? "logout-active" : ""
+                      }`}
+                    >
                       <Link
                         className={
                           location.pathname === "/login"
@@ -157,17 +139,16 @@ export default function Header() {
                       </div>
                     </li>
                     <li className="nav-item">
-                      <Link
+                      <div
                         className={
                           location.pathname === "/shopping-cart"
                             ? "nav-link active"
                             : "nav-link inactive"
                         }
-                        to="shopping-cart"
-                        onClick={scrollToTop}
+                        onClick={() => setOpen(!open)}
                       >
                         <IoCartOutline />
-                      </Link>
+                      </div>
                     </li>
                     {/* Conditionally render "Logout", "Register", or "Login" based on isLoggedIn */}
                   </ul>
@@ -176,6 +157,7 @@ export default function Header() {
             </div>
           </div>
         </div>
+        {open && <Cart />}
       </div>
     </header>
   );
