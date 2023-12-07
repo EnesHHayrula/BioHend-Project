@@ -81,7 +81,6 @@ const Shop = () => {
   //   }
   // };
   const id = parseInt(useParams().id);
-  console.log(id);
   return (
     <div>
       <>
