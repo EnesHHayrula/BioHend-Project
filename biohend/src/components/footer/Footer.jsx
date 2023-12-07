@@ -5,6 +5,14 @@ export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
+
+  const openInNewTab = () => {
+    window.open(
+      "https://maps.app.goo.gl/yQtKKYtx14afCip46",
+      "_blank",
+      "noreferrer"
+    );
+  };
   return (
     <>
       <footer id="contact">
@@ -14,8 +22,12 @@ export default function Footer() {
               <div className="col-md-4 border_right">
                 <ul className="location_icon">
                   <li>
-                    <Link href="#">
-                      <i className="fa fa-map-marker" aria-hidden="true" />
+                    <Link to="">
+                      <i
+                        className="fa fa-map-marker"
+                        aria-hidden="true"
+                        onClick={openInNewTab}
+                      />
                     </Link>
                     Aytos, Burgas, Bulgaria
                   </li>

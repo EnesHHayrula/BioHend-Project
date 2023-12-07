@@ -13,7 +13,6 @@
   color: #fff;
 }
 
-
 ul.location_icon {
   padding-top: 12px;
   text-align: left;
@@ -60,7 +59,7 @@ ul.link li a {
 }
 
 ul.link li a:hover {
-  color: #f4cb1e;
+  color: #8d1ef4;
 }
 
 ul.link li a::after {
