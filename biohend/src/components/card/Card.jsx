@@ -15,18 +15,22 @@ const addToCartHandler = (e) => {
 };
 
 const Card = ({ item }) => {
+  const { id, attributes } = item;
+  const { title, price, image } = attributes;
+  const imageUrl = `http://localhost:1337${image.data[0].attributes.formats.thumbnail.url}`;
+
   return (
     <div className="col-sm-6 col-md-4 col-lg-4 col-xs-12">
       <div className="products" data-id="2">
-        <Link className="card-link" to={`/shop/${item.id}`}>
-          <img src={item.img} className="products-image" />
+        <Link className="card-link" to={`/shop/${id}`}>
+          <img src={imageUrl} className="products-image" alt={title} />
           <div className="col-xs-12 text-center">
-            <h3>{item.title}</h3>
+            <h3>{title}</h3>
           </div>
         </Link>
         <div className="row">
           <div className="col-xs-12 col-md-6 products-icons">
-            <p className="price">$ {item.price}</p>
+            <p className="price">$ {price}</p>
           </div>
           <div className="col-xs-12 col-md-6 text-right products-icons">
             <span
