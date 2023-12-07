@@ -32,6 +32,7 @@
 }
 
 .products-image {
+  object-fit:contain;
   background-size: cover;
   background-position: center;
   width: 100%;
