@@ -2,10 +2,19 @@ import React, { useState } from "react";
 import Products from "../products/Products";
 import { FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
-import pr1 from "/images/product1.jpg";
+import pr1 from "/images/product2.jpg";
 import "./ProductDetails.css";
 
 const ProductDetails = () => {
+  const addToCartHandler = (e) => {
+    let items = JSON.parse(localStorage.getItem("shoppingCart")) ?? [];
+
+    items.push({
+      id: $(e.target).parents(".products").attr("data-id"),
+      qty: 1,
+    });
+    localStorage.setItem("shoppingCart", JSON.stringify(items));
+  };
   const [quantity, setQuantity] = useState(0);
   return (
     <div className="product">
@@ -36,7 +45,7 @@ const ProductDetails = () => {
         >
           -
         </button>
-        <button className="add">
+        <button className="add" onClick={addToCartHandler}>
           <IoCartOutline />
           ADD TO CART
         </button>
