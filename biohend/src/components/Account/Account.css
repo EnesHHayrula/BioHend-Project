@@ -1,7 +1,6 @@
 .user-modal {
   width: 350px;
   height: 500px;
-  overflow: hidden;
   background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
   border-radius: 10px;
   box-shadow: 5px 20px 50px #000;

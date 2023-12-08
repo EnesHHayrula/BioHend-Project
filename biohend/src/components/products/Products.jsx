@@ -21,18 +21,15 @@ export const Products = () => {
     };
     fetchData();
   }, []);
-  
+
   return (
     <>
       <div className="shop-box-inner">
         <div className="container">
           <div className="row">
-            {data.map(
-              (item) => (
-                <Card item={item} key={item.id} />
-              )
-              // <Card item={item} key={item.id} />
-            )}
+            {data.map((item) => (
+              <Card item={item} key={item.id} />
+            ))}
           </div>
         </div>
       </div>
