@@ -4,20 +4,15 @@ import { FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import "./ProductDetails.css";
 import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartReducer";
+import Loader from "../Loader";
 
 const ProductDetails = () => {
-  const addToCartHandler = (e) => {
-    let items = JSON.parse(localStorage.getItem("shoppingCart")) ?? [];
+  const dispatch = useDispatch();
+  const [quantity, setQuantity] = useState(1);
 
-    items.push({
-      id: $(e.target).parents(".products").attr("data-id"),
-      qty: 1,
-    });
-    localStorage.setItem("shoppingCart", JSON.stringify(items));
-  };
-  const [quantity, setQuantity] = useState([]);
-
-  const { id } = useParams(); // Get the product ID from the URL params
+  const { id } = useParams();
   const url = `http://localhost:1337/api/products/${id}?populate=*`;
   const [product, setProduct] = useState(null);
 
@@ -40,7 +35,11 @@ const ProductDetails = () => {
   }, [id]);
 
   if (!product) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
   }
   const { attributes } = product;
   const imageUrl = `http://localhost:1337${attributes.image.data[0].attributes.formats.thumbnail.url}`;
@@ -70,7 +69,21 @@ const ProductDetails = () => {
         >
           -
         </button>
-        <button className="add" onClick={addToCartHandler}>
+        <button
+          className="add"
+          onClick={() =>
+            dispatch(
+              addToCart({
+                id: id,
+                title: attributes.title,
+                description: attributes.description,
+                price: attributes.price,
+                imageUrl: attributes.imageUrl,
+                quantity,
+              })
+            )
+          }
+        >
           <IoCartOutline />
           ADD TO CART
         </button>
