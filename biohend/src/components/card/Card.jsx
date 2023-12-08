@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Card.css";
 import { Link } from "react-router-dom";
 
@@ -45,9 +45,9 @@ const Card = ({ item }) => {
           </div>
         </div>
         <div className="col-xs-12 text-center">
-          <a className="cart" href="#" onClick={addToCartHandler}>
-            Add to Cart
-          </a>
+          <Link className="cart" to={`/shop/${id}`}>
+            Details
+          </Link>
         </div>
       </div>
     </div>
