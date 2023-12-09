@@ -16,6 +16,7 @@ import AuthGuard from "./components/guards/AuthGuard";
 import Login from "./components/Account/Login";
 import Register from "./components/Account/Register";
 import ProductDetails from "./components/product-details/ProductDetails";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
                 </Route>
               </Route>
             </Routes>
+            <ToastContainer />
           </AuthProvider>
         </ErrorBoundary>
       </div>
