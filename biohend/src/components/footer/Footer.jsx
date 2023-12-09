@@ -48,26 +48,7 @@ export default function Footer() {
                   </li>
                 </ul>
               </div>
-              <div className="col-md-4 border_right">
-                <h3>Useful Link</h3>
-                <ul className="link">
-                  <li>
-                    <Link href="#">humour, or </Link>
-                  </li>
-                  <li>
-                    <Link href="#">randomised words </Link>
-                  </li>
-                  <li>
-                    <Link href="#">which don't look </Link>
-                  </li>
-                  <li>
-                    <Link href="#">even slightly</Link>
-                  </li>
-                  <li>
-                    <Link href="#">believable. If </Link>
-                  </li>
-                </ul>
-              </div>
+            
               <div className="col-md-4 border_left">
                 <h3>Menus</h3>
                 <ul className="link">
