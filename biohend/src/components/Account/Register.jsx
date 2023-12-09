@@ -1,26 +1,45 @@
-import { useContext } from "react";
+import { useState } from "react";
 import "./Account.css";
-import AuthContext from "../../contexts/authContext";
-import useForm from "../../hooks/useForm";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { toast } from "react-toastify";
 
-const RegisterFormKeys = {
-  Email: "email",
-  Password: "password",
-  ConfirmPassword: "confirm-password",
-};
+const initialUser = { username: "", email: "", password: "" };
+const Register = () => {
+  const [user, setUser] = useState(initialUser);
+  const navigate = useNavigate();
 
-export default function Register({ onClose, onShow }) {
-  const { registerSubmitHandler } = useContext(AuthContext);
-  const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
-    [RegisterFormKeys.Email]: "",
-    [RegisterFormKeys.Password]: "",
-    [RegisterFormKeys.ConfirmPassword]: "",
-  });
+  const signUp = async () => {
+    try {
+      const url = `http://localhost:1337/api/auth/local/register`;
+      if (user.email && user.username && user.password) {
+        const res = await axios.post(url, user);
+        if (res) {
+          setUser(initialUser);
+          navigate("/login");
+        }
+      }
+    } catch (error) {
+      toast.error(error.message, {
+        hideProgressBar: true,
+      });
+    }
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    signUp();
+  };
+  const handleUserChange = ({ target }) => {
+    const { name, value } = target;
+    setUser((currentUser) => ({
+      ...currentUser,
+      [name]: value,
+    }));
+  };
 
   return (
     <div className="user-modal">
-      <input type="checkbox" id="chk" aria-hidden="true" />
       <div className="signup">
         <form id="register" onSubmit={onSubmit}>
           <label htmlFor="email" aria-hidden="true">
@@ -31,22 +50,22 @@ export default function Register({ onClose, onShow }) {
             type="email"
             name="email"
             placeholder="Email"
-            onChange={onChange}
-            values={values[RegisterFormKeys.Email]}
+            onChange={handleUserChange}
+            value={user.email}
+          />
+          <input
+            type="username"
+            name="username"
+            placeholder="username"
+            onChange={handleUserChange}
+            value={user.username}
           />
           <input
             type="password"
             name="password"
             placeholder="Password"
-            onChange={onChange}
-            values={values[RegisterFormKeys.Password]}
-          />
-          <input
-            type="password"
-            name="confirm-password"
-            placeholder="Confirm Password"
-            onChange={onChange}
-            values={values[RegisterFormKeys.ConfirmPassword]}
+            onChange={handleUserChange}
+            value={user.password}
           />
           <button className="btn submit" type="submit">
             Sign up
@@ -58,4 +77,6 @@ export default function Register({ onClose, onShow }) {
       </div>
     </div>
   );
-}
+};
+
+export default Register;
