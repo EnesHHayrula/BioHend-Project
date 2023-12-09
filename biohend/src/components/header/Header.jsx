@@ -1,18 +1,34 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { VscAccount } from "react-icons/vsc";
 import { IoCartOutline } from "react-icons/io5";
-import AuthContext from "../../contexts/authContext";
 import Cart from "../cart/Cart";
+import { useSelector } from "react-redux";
+import { userData } from "../../../helpers";
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
+  const { username } = userData();
+  const storedUserData = JSON.parse(localStorage.getItem("user"));
+  const products = useSelector((state) => state.cart.products);
 
-  const { isAuthenticated } = useContext(AuthContext);
+  const [open, setOpen] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(!!storedUserData);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsAuthenticated(true);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setIsAuthenticated(false);
   };
 
   const location = useLocation();
@@ -99,11 +115,7 @@ export default function Header() {
                         Contact
                       </Link>
                     </li>
-                    <li className="nav-item d_none">
-                      <Link className="nav-link" to="search">
-                        <i className="fa fa-search" aria-hidden="true" />
-                      </Link>
-                    </li>
+
                     <li className="nav-item">
                       <Link
                         className={
@@ -117,27 +129,27 @@ export default function Header() {
                         <FaRegHeart />
                       </Link>
                     </li>
-                    <li
-                      className={`nav-item ${
-                        isAuthenticated ? "logout-active" : ""
-                      }`}
-                    >
-                      <Link
-                        className={
-                          location.pathname === "/login"
-                            ? "nav-link active"
-                            : "nav-link inactive"
-                        }
-                        to={`${isAuthenticated ? "" : "/login"}`}
-                        onClick={scrollToTop}
-                      >
-                        <VscAccount />
-                      </Link>
-                      <div className="logout">
-                        <p>Hi, Pesho</p>
-                        <Link to="/logout">Logout</Link>
-                      </div>
+                    <li className="nav-item">
+                      {isAuthenticated ? (
+                        <div className="logout">
+                          <p>Hi, {username}</p>
+                          <button onClick={handleLogout}>Logout</button>{" "}
+                        </div>
+                      ) : (
+                        <Link
+                          className={
+                            location.pathname === "/login"
+                              ? "nav-link active"
+                              : "nav-link inactive"
+                          }
+                          to={`${isAuthenticated ? "" : "/login"}`}
+                          onClick={scrollToTop}
+                        >
+                          <VscAccount />
+                        </Link>
+                      )}
                     </li>
+
                     <li className="nav-item">
                       <div
                         className={
@@ -148,6 +160,7 @@ export default function Header() {
                         onClick={() => setOpen(!open)}
                       >
                         <IoCartOutline />
+                        <span>{products.length}</span>
                       </div>
                     </li>
                     {/* Conditionally render "Logout", "Register", or "Login" based on isLoggedIn */}
